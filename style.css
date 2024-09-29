@@ -36,7 +36,7 @@
   padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   line-height: 1.2;
   font-family: var(--ff-headings);
   font-size: var(--fs-headings);
@@ -76,7 +76,7 @@ table {
   color: var(--stone-900);
 }
 
-.prep-title {
+h3 {
   font-size: 1.27rem;
   font-weight: var(--fw-600);
   color: var(--rose-800);
@@ -88,9 +88,14 @@ span {
   color: var(--stone-600);
 }
 
+[data-cell="nutrient"] {
+  font-weight: var(--fw-600);
+}
+
 [data-cell="nutrient-value"] {
   color: var(--brown-800);
   font-weight: var(--fw-600);
+  padding-inline:1rem;
 }
 
 li {
@@ -102,9 +107,13 @@ li::marker {
   color: var(--brown-800);
 }
 
+ol li::marker {
+  font-weight: bold;
+}
+
 /* layout styles */
 
-.wrapper {
+main {
   display: grid;
   place-items: center;
 }
@@ -112,7 +121,7 @@ li::marker {
 .recipe-wrapper {
   max-width: 45em;
   background-color: white;
-  padding: 1.75rem;
+  padding: 2.5rem;
   margin: 6rem 0;
   border-radius: 1.5rem;
 }
@@ -146,7 +155,8 @@ hr {
 tr {
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
-  padding: 1rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
   border-bottom: 1px solid var(--stone-150);
 }
 
@@ -154,7 +164,7 @@ tr:nth-child(4) {
   border-bottom: none;
 } 
 
-@media (max-width:400px) {
+@media (max-width:375px) {
   .recipe-wrapper {
     margin: 0;
     border-radius: 0;
@@ -173,4 +183,9 @@ tr:nth-child(4) {
     font-size: 2.2rem;
   }
 
+}
+
+footer {
+  margin: auto;
+  width: fit-content;
 }

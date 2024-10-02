@@ -36,6 +36,15 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--ff-main);
+  font-weight: 300;
+  font-size: var(--fs-main);
+  line-height: 1.5;
+  color: var(--stone-900);
+  background-color: var(--stone-100);
+}
+
 h1, h2 {
   line-height: 1.2;
   font-family: var(--ff-headings);
@@ -56,14 +65,6 @@ img {
   color: var(--rose-800);
 }
 
-body {
-  font-family: var(--ff-main);
-  font-weight: var(--fw-400);
-  font-size: var(--fs-main);
-  line-height: 1.5;
-  color: var(--stone-900);
-  background-color: var(--stone-100);
-}
 table {
   border-collapse: collapse;
   width: 100%; 
@@ -76,7 +77,7 @@ table {
   color: var(--stone-900);
 }
 
-h3 {
+.prep-title {
   font-size: 1.27rem;
   font-weight: var(--fw-600);
   color: var(--rose-800);
@@ -89,13 +90,13 @@ span {
 }
 
 [data-cell="nutrient"] {
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-400);
 }
 
 [data-cell="nutrient-value"] {
   color: var(--brown-800);
-  font-weight: var(--fw-600);
-  padding-inline:1rem;
+  font-weight: var(--fw-700);
+  padding-inline: 1rem;
 }
 
 li {
@@ -105,11 +106,13 @@ li {
 
 li::marker {
   color: var(--brown-800);
+  font-size:small;
 }
 
 ol li::marker {
   font-weight: bold;
-}
+  font-family: sans-serif;
+} 
 
 /* layout styles */
 
@@ -119,10 +122,10 @@ main {
 }
 
 .recipe-wrapper {
-  max-width: 45em;
+  max-width: 46em;
   background-color: white;
   padding: 2.5rem;
-  margin: 6rem 0;
+  margin: 5rem 0;
   border-radius: 1.5rem;
 }
 
